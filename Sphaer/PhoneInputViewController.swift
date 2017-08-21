@@ -10,14 +10,35 @@ import UIKit
 
 class PhoneInputViewController: BaseRegistrationController {
 
+    @IBOutlet weak var phoneNumberInputInfoLabel: UILabel!
+    
+    @IBOutlet weak var yourCountryPlaceholderLabel: UILabel!
+    
+    @IBOutlet weak var emojjiFlagOfCountryLabel: UILabel!
+    
+    @IBOutlet weak var countryNameLabel: UILabel!
+    
+    @IBAction func selectCountryPressed(_ sender: UIButton) {
+    }
+    
+    
+    @IBOutlet weak var yourPhonePlaceholderLabel: UILabel!
+    
+    @IBOutlet weak var countryCodeLabel: UILabel!
+    
+    @IBOutlet weak var phoneTextFiled: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupNavigationBar(title: "Phone Number")
+        
+        setupUI()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func setupUI() {
+        phoneNumberInputInfoLabel.textColor = UIColor.sphaerWarmGrey
+        yourCountryPlaceholderLabel.textColor = UIColor.sphaerDarkGrey
     }
 }

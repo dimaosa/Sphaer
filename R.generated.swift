@@ -373,10 +373,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 3 images.
+  /// This `R.image` struct is generated, and contains static references to 4 images.
   struct image {
     /// Image `icArrowBack`.
     static let icArrowBack = Rswift.ImageResource(bundle: R.hostingBundle, name: "icArrowBack")
+    /// Image `icDropdown`.
+    static let icDropdown = Rswift.ImageResource(bundle: R.hostingBundle, name: "icDropdown")
     /// Image `icLogo`.
     static let icLogo = Rswift.ImageResource(bundle: R.hostingBundle, name: "icLogo")
     /// Image `icPattern`.
@@ -385,6 +387,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icArrowBack", bundle: ..., traitCollection: ...)`
     static func icArrowBack(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icArrowBack, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icDropdown", bundle: ..., traitCollection: ...)`
+    static func icDropdown(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icDropdown, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icLogo", bundle: ..., traitCollection: ...)`
@@ -499,6 +506,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
+        if UIKit.UIImage(named: "icDropdown") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icDropdown' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icLogo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icLogo' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icPattern") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icPattern' is used in storyboard 'Main', but couldn't be loaded.") }
         if _R.storyboard.main().getStartedViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'getStartedViewController' could not be loaded from storyboard 'Main' as 'GetStartedViewController'.") }

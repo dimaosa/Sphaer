@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,6 +19,9 @@
         </array>
         <array key="SanFranciscoText-Bold.otf">
             <string>SanFranciscoText-Bold</string>
+        </array>
+        <array key="SanFranciscoText-Light.otf">
+            <string>SanFranciscoText-Light</string>
         </array>
         <array key="SanFranciscoText-Regular.otf">
             <string>SanFranciscoText-Regular</string>
@@ -371,12 +374,123 @@ and airline sites to help you find cheap flights at best prices.</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icPattern" translatesAutoresizingMaskIntoConstraints="NO" id="ave-pq-k9K">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please confirm your country code and enter your phone number." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVo-KD-uHd">
+                                <rect key="frame" x="30" y="94" width="260" height="41"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoText-Light" family="San Francisco Text" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eps-Cg-LKi">
+                                <rect key="frame" x="30" y="165" width="260" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SI4-zg-AYH">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="50"/>
+                                        <connections>
+                                            <action selector="selectCountryPressed:" destination="VnZ-Qd-10F" eventType="touchUpInside" id="aI2-TA-tqD"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR COUNTRY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nX-5E-X7k">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="14.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="UPJ-Rd-7EG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SanFranciscoText-Bold" family="San Francisco Text" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7e9-sV-FPc">
+                                        <rect key="frame" x="35" y="14.5" width="43" height="35.5"/>
+                                        <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icDropdown" translatesAutoresizingMaskIntoConstraints="NO" id="aqb-2Q-bcg">
+                                        <rect key="frame" x="80" y="27" width="10" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="10" id="Trg-hk-NAl"/>
+                                            <constraint firstAttribute="width" secondItem="aqb-2Q-bcg" secondAttribute="height" multiplier="1:1" id="tsB-XV-bqb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🇺🇸" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qV-uC-ltk">
+                                        <rect key="frame" x="0.0" y="14.5" width="25" height="35.5"/>
+                                        <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1x4-9j-jT2"/>
+                                    <constraint firstAttribute="bottom" secondItem="SI4-zg-AYH" secondAttribute="bottom" id="Gwq-Av-scx"/>
+                                    <constraint firstAttribute="trailing" secondItem="9nX-5E-X7k" secondAttribute="trailing" id="KgZ-t4-NYE"/>
+                                    <constraint firstAttribute="trailing" secondItem="SI4-zg-AYH" secondAttribute="trailing" id="Mrx-WF-AuH"/>
+                                    <constraint firstItem="SI4-zg-AYH" firstAttribute="leading" secondItem="eps-Cg-LKi" secondAttribute="leading" id="N8d-Dp-nxg"/>
+                                    <constraint firstAttribute="bottom" secondItem="0qV-uC-ltk" secondAttribute="bottom" id="QnB-e9-lDe"/>
+                                    <constraint firstItem="7e9-sV-FPc" firstAttribute="leading" secondItem="0qV-uC-ltk" secondAttribute="trailing" constant="10" id="RxO-4r-5RT"/>
+                                    <constraint firstAttribute="bottom" secondItem="7e9-sV-FPc" secondAttribute="bottom" id="X2w-um-StD"/>
+                                    <constraint firstItem="aqb-2Q-bcg" firstAttribute="centerY" secondItem="7e9-sV-FPc" secondAttribute="centerY" id="bFx-kq-RRY"/>
+                                    <constraint firstItem="9nX-5E-X7k" firstAttribute="leading" secondItem="eps-Cg-LKi" secondAttribute="leading" id="buF-K4-tO2"/>
+                                    <constraint firstItem="0qV-uC-ltk" firstAttribute="top" secondItem="9nX-5E-X7k" secondAttribute="bottom" id="gsF-Q4-j0f"/>
+                                    <constraint firstItem="aqb-2Q-bcg" firstAttribute="leading" secondItem="7e9-sV-FPc" secondAttribute="trailing" constant="2" id="iEa-id-UBA"/>
+                                    <constraint firstItem="7e9-sV-FPc" firstAttribute="top" secondItem="9nX-5E-X7k" secondAttribute="bottom" id="jBe-Ap-leU"/>
+                                    <constraint firstItem="9nX-5E-X7k" firstAttribute="top" secondItem="eps-Cg-LKi" secondAttribute="top" id="kgV-Wb-9oD"/>
+                                    <constraint firstItem="SI4-zg-AYH" firstAttribute="top" secondItem="eps-Cg-LKi" secondAttribute="top" id="n9w-Wp-ckt"/>
+                                    <constraint firstItem="0qV-uC-ltk" firstAttribute="leading" secondItem="eps-Cg-LKi" secondAttribute="leading" id="vAA-1F-CwX"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rvn-wl-hpf">
+                                <rect key="frame" x="30" y="245" width="260" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR PHONE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWc-yN-vnR">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="Wlh-g7-3TM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SanFranciscoText-Bold" family="San Francisco Text" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="786-My-EcP">
+                                        <rect key="frame" x="0.0" y="14.5" width="25.5" height="35.5"/>
+                                        <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="146-781-3451" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YpQ-1V-aQS">
+                                        <rect key="frame" x="29.5" y="15" width="230.5" height="35"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="YpQ-1V-aQS" firstAttribute="leading" secondItem="786-My-EcP" secondAttribute="trailing" constant="4" id="Aqs-0t-Ace"/>
+                                    <constraint firstItem="786-My-EcP" firstAttribute="top" secondItem="KWc-yN-vnR" secondAttribute="bottom" id="C9E-Oh-N7h"/>
+                                    <constraint firstAttribute="trailing" secondItem="KWc-yN-vnR" secondAttribute="trailing" id="HEY-Ss-AiM"/>
+                                    <constraint firstItem="786-My-EcP" firstAttribute="leading" secondItem="Rvn-wl-hpf" secondAttribute="leading" id="HQY-FY-ruV"/>
+                                    <constraint firstAttribute="bottom" secondItem="YpQ-1V-aQS" secondAttribute="bottom" id="S5G-2L-8cU"/>
+                                    <constraint firstItem="YpQ-1V-aQS" firstAttribute="top" secondItem="KWc-yN-vnR" secondAttribute="bottom" id="T36-Vh-Rbw"/>
+                                    <constraint firstItem="KWc-yN-vnR" firstAttribute="top" secondItem="Rvn-wl-hpf" secondAttribute="top" id="agT-DE-LOh"/>
+                                    <constraint firstAttribute="bottom" secondItem="786-My-EcP" secondAttribute="bottom" id="gWp-Kd-BxB"/>
+                                    <constraint firstAttribute="height" constant="50" id="nx1-uE-EoH"/>
+                                    <constraint firstItem="KWc-yN-vnR" firstAttribute="leading" secondItem="Rvn-wl-hpf" secondAttribute="leading" id="rcC-49-yRn"/>
+                                    <constraint firstAttribute="trailing" secondItem="YpQ-1V-aQS" secondAttribute="trailing" id="ug3-De-iM1"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="qVo-KD-uHd" firstAttribute="top" secondItem="phH-9a-187" secondAttribute="bottom" constant="30" id="1ds-vn-0iC"/>
+                            <constraint firstItem="Rvn-wl-hpf" firstAttribute="top" secondItem="eps-Cg-LKi" secondAttribute="bottom" constant="30" id="2Qw-KB-pmn"/>
+                            <constraint firstItem="eps-Cg-LKi" firstAttribute="leading" secondItem="Bul-0c-oUu" secondAttribute="leading" constant="30" id="CS4-CA-Cor"/>
                             <constraint firstItem="ave-pq-k9K" firstAttribute="leading" secondItem="Bul-0c-oUu" secondAttribute="leading" id="Ff9-ai-hIA"/>
                             <constraint firstItem="rYh-Lc-B0C" firstAttribute="top" secondItem="ave-pq-k9K" secondAttribute="bottom" id="Gb3-Ha-3Cr"/>
+                            <constraint firstItem="Rvn-wl-hpf" firstAttribute="leading" secondItem="Bul-0c-oUu" secondAttribute="leading" constant="30" id="abn-ih-YWv"/>
+                            <constraint firstAttribute="trailing" secondItem="qVo-KD-uHd" secondAttribute="trailing" constant="30" id="cXG-NA-dbu"/>
+                            <constraint firstItem="qVo-KD-uHd" firstAttribute="leading" secondItem="Bul-0c-oUu" secondAttribute="leading" constant="30" id="fQ8-Ze-Vah"/>
                             <constraint firstItem="ave-pq-k9K" firstAttribute="top" secondItem="Bul-0c-oUu" secondAttribute="top" id="gFp-7t-AXF"/>
+                            <constraint firstAttribute="trailing" secondItem="Rvn-wl-hpf" secondAttribute="trailing" constant="30" id="hrM-hN-mmn"/>
+                            <constraint firstAttribute="trailing" secondItem="eps-Cg-LKi" secondAttribute="trailing" constant="30" id="oX0-DQ-O1y"/>
+                            <constraint firstItem="eps-Cg-LKi" firstAttribute="top" secondItem="qVo-KD-uHd" secondAttribute="bottom" constant="30" id="vmQ-C2-q7i"/>
                             <constraint firstAttribute="trailing" secondItem="ave-pq-k9K" secondAttribute="trailing" id="vnM-gM-vsQ"/>
                         </constraints>
                     </view>
@@ -384,13 +498,23 @@ and airline sites to help you find cheap flights at best prices.</string>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="countryCodeLabel" destination="786-My-EcP" id="oKe-TM-chq"/>
+                        <outlet property="countryNameLabel" destination="7e9-sV-FPc" id="8JU-40-myr"/>
+                        <outlet property="emojjiFlagOfCountryLabel" destination="0qV-uC-ltk" id="m26-08-1dT"/>
+                        <outlet property="phoneNumberInputInfoLabel" destination="qVo-KD-uHd" id="HpE-SA-YbP"/>
+                        <outlet property="phoneTextFiled" destination="YpQ-1V-aQS" id="E7j-nN-TWj"/>
+                        <outlet property="yourCountryPlaceholderLabel" destination="9nX-5E-X7k" id="ojb-po-EVE"/>
+                        <outlet property="yourPhonePlaceholderLabel" destination="KWc-yN-vnR" id="W5m-ol-zPn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ITM-tV-aGi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1755" y="570"/>
+            <point key="canvasLocation" x="1755" y="569.36619718309862"/>
         </scene>
     </scenes>
     <resources>
+        <image name="icDropdown" width="10" height="10"/>
         <image name="icLogo" width="95" height="95"/>
         <image name="icPattern" width="375" height="667"/>
     </resources>

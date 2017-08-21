@@ -19,7 +19,7 @@ extension UIFont {
     }
     
     class func sphaerNavigationBarTitleFont() -> UIFont? {
-        return UIFont(name: "SanFranciscoDisplay-Medium", size: 26.0)
+        return UIFont(name: "SanFranciscoDisplay-Medium", size: 22.0)
     }
     
     class func sphaerFlagsFont() -> UIFont? {

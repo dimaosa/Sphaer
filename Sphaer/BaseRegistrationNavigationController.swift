@@ -29,7 +29,7 @@ class BaseRegistrationController: UIViewController {
         navigationItem.title = title
         navigationController?.navigationBar.titleTextAttributes = [
             NSForegroundColorAttributeName : UIColor.darkGray,
-            NSFontAttributeName : UIFont.sphaerNavigationBarTitleFont() ?? UIFont.systemFont(ofSize: 26)
+            NSFontAttributeName : UIFont.sphaerNavigationBarTitleFont() ?? UIFont.systemFont(ofSize: 22)
         ]
         
         if let bounds = navigationController?.navigationBar.bounds {
