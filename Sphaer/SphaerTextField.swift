@@ -13,7 +13,7 @@ class SphaerTextField: UITextField, UITextFieldDelegate {
     @IBInspectable var isPasteEnabled: Bool = true
     @IBInspectable var insetX: CGFloat = 0.0
     @IBInspectable var insetY: CGFloat = 0.0
-    
+        
     override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
         
         if action == #selector(UIResponderStandardEditActions.paste(_:)) {

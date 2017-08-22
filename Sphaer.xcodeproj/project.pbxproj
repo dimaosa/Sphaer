@@ -43,6 +43,8 @@
 		D207CDC51F293C6700B1AAE3 /* PhoneInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207CDC41F293C6700B1AAE3 /* PhoneInputViewController.swift */; };
 		D207CDE71F2A4F4800B1AAE3 /* BaseRegistrationNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207CDE61F2A4F4800B1AAE3 /* BaseRegistrationNavigationController.swift */; };
 		D272DE621F4C9E8E002F9F0B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272DE611F4C9E8D002F9F0B /* Helper.swift */; };
+		D272DE641F4CAA6E002F9F0B /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272DE631F4CAA6E002F9F0B /* Country.swift */; };
+		D2AD68321F4CEB5A00DB7E3E /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD68311F4CEB5A00DB7E3E /* Countries.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +87,8 @@
 		D207CDC41F293C6700B1AAE3 /* PhoneInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneInputViewController.swift; sourceTree = "<group>"; };
 		D207CDE61F2A4F4800B1AAE3 /* BaseRegistrationNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRegistrationNavigationController.swift; sourceTree = "<group>"; };
 		D272DE611F4C9E8D002F9F0B /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		D272DE631F4CAA6E002F9F0B /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		D2AD68311F4CEB5A00DB7E3E /* Countries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
 		E24E3C5E51784F8A3E36A067 /* Pods_Sphaer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sphaer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -143,7 +147,7 @@
 				D207CDB71F28E09D00B1AAE3 /* GetStartedViewController.swift */,
 				D207CDBD1F292A2F00B1AAE3 /* LoginViewController.swift */,
 				D207CDE61F2A4F4800B1AAE3 /* BaseRegistrationNavigationController.swift */,
-				D207CDC41F293C6700B1AAE3 /* PhoneInputViewController.swift */,
+				D272DE671F4CAA9C002F9F0B /* PhoneNumber */,
 				D207CDC01F292A9400B1AAE3 /* Helpers */,
 				D207CDBF1F292A8500B1AAE3 /* Resources */,
 			);
@@ -200,6 +204,24 @@
 				D207CDB51F28DFD900B1AAE3 /* Extension+UIColor.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		D272DE671F4CAA9C002F9F0B /* PhoneNumber */ = {
+			isa = PBXGroup;
+			children = (
+				D207CDC41F293C6700B1AAE3 /* PhoneInputViewController.swift */,
+				D272DE681F4CAAAE002F9F0B /* Model */,
+			);
+			name = PhoneNumber;
+			sourceTree = "<group>";
+		};
+		D272DE681F4CAAAE002F9F0B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D272DE631F4CAA6E002F9F0B /* Country.swift */,
+				D2AD68311F4CEB5A00DB7E3E /* Countries.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,9 +385,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D207CDBA1F28E51E00B1AAE3 /* SphaerButton.swift in Sources */,
+				D2AD68321F4CEB5A00DB7E3E /* Countries.swift in Sources */,
 				D207CDE71F2A4F4800B1AAE3 /* BaseRegistrationNavigationController.swift in Sources */,
 				D207CDB41F28DE6F00B1AAE3 /* Extension+UIFont.swift in Sources */,
 				D207CDC51F293C6700B1AAE3 /* PhoneInputViewController.swift in Sources */,
+				D272DE641F4CAA6E002F9F0B /* Country.swift in Sources */,
 				D272DE621F4C9E8E002F9F0B /* Helper.swift in Sources */,
 				D207CD771F28D72300B1AAE3 /* AppDelegate.swift in Sources */,
 				D207CDC31F293C1500B1AAE3 /* R.generated.swift in Sources */,
