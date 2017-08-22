@@ -476,11 +476,26 @@ and airline sites to help you find cheap flights at best prices.</string>
                                     <constraint firstAttribute="trailing" secondItem="YpQ-1V-aQS" secondAttribute="trailing" id="ug3-De-iM1"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7t-f7-Lpk" customClass="SphaerButton" customModule="Sphaer" customModuleProvider="target">
+                                <rect key="frame" x="30" y="325" width="260" height="50"/>
+                                <color key="backgroundColor" red="0.30371430519999998" green="0.62709355349999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ivo-Mv-UHS"/>
+                                </constraints>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="signButton"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qVo-KD-uHd" firstAttribute="top" secondItem="phH-9a-187" secondAttribute="bottom" constant="30" id="1ds-vn-0iC"/>
                             <constraint firstItem="Rvn-wl-hpf" firstAttribute="top" secondItem="eps-Cg-LKi" secondAttribute="bottom" constant="30" id="2Qw-KB-pmn"/>
+                            <constraint firstItem="M7t-f7-Lpk" firstAttribute="leading" secondItem="Bul-0c-oUu" secondAttribute="leading" constant="30" id="8RX-o5-9g3"/>
+                            <constraint firstAttribute="trailing" secondItem="M7t-f7-Lpk" secondAttribute="trailing" constant="30" id="8sS-jX-EET"/>
                             <constraint firstItem="eps-Cg-LKi" firstAttribute="leading" secondItem="Bul-0c-oUu" secondAttribute="leading" constant="30" id="CS4-CA-Cor"/>
                             <constraint firstItem="ave-pq-k9K" firstAttribute="leading" secondItem="Bul-0c-oUu" secondAttribute="leading" id="Ff9-ai-hIA"/>
                             <constraint firstItem="rYh-Lc-B0C" firstAttribute="top" secondItem="ave-pq-k9K" secondAttribute="bottom" id="Gb3-Ha-3Cr"/>
@@ -489,6 +504,7 @@ and airline sites to help you find cheap flights at best prices.</string>
                             <constraint firstItem="qVo-KD-uHd" firstAttribute="leading" secondItem="Bul-0c-oUu" secondAttribute="leading" constant="30" id="fQ8-Ze-Vah"/>
                             <constraint firstItem="ave-pq-k9K" firstAttribute="top" secondItem="Bul-0c-oUu" secondAttribute="top" id="gFp-7t-AXF"/>
                             <constraint firstAttribute="trailing" secondItem="Rvn-wl-hpf" secondAttribute="trailing" constant="30" id="hrM-hN-mmn"/>
+                            <constraint firstItem="M7t-f7-Lpk" firstAttribute="top" secondItem="Rvn-wl-hpf" secondAttribute="bottom" constant="30" id="mY1-lH-Ihe"/>
                             <constraint firstAttribute="trailing" secondItem="eps-Cg-LKi" secondAttribute="trailing" constant="30" id="oX0-DQ-O1y"/>
                             <constraint firstItem="eps-Cg-LKi" firstAttribute="top" secondItem="qVo-KD-uHd" secondAttribute="bottom" constant="30" id="vmQ-C2-q7i"/>
                             <constraint firstAttribute="trailing" secondItem="ave-pq-k9K" secondAttribute="trailing" id="vnM-gM-vsQ"/>
@@ -510,7 +526,7 @@ and airline sites to help you find cheap flights at best prices.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ITM-tV-aGi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1755" y="569.36619718309862"/>
+            <point key="canvasLocation" x="1778" y="570"/>
         </scene>
     </scenes>
     <resources>
