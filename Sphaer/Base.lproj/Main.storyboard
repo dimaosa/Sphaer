@@ -449,14 +449,14 @@ and airline sites to help you find cheap flights at best prices.</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="786-My-EcP">
-                                        <rect key="frame" x="0.0" y="14.5" width="25.5" height="35.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+358" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="786-My-EcP">
+                                        <rect key="frame" x="0.0" y="14.5" width="53" height="35.5"/>
                                         <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="146-781-3451" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YpQ-1V-aQS">
-                                        <rect key="frame" x="29.5" y="15" width="230.5" height="35"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="146-781-3451" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YpQ-1V-aQS" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
+                                        <rect key="frame" x="57" y="15" width="203" height="35"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="24"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -503,7 +503,7 @@ and airline sites to help you find cheap flights at best prices.</string>
                         <outlet property="countryNameLabel" destination="7e9-sV-FPc" id="8JU-40-myr"/>
                         <outlet property="emojjiFlagOfCountryLabel" destination="0qV-uC-ltk" id="m26-08-1dT"/>
                         <outlet property="phoneNumberInputInfoLabel" destination="qVo-KD-uHd" id="HpE-SA-YbP"/>
-                        <outlet property="phoneTextFiled" destination="YpQ-1V-aQS" id="E7j-nN-TWj"/>
+                        <outlet property="phoneTextField" destination="YpQ-1V-aQS" id="iQl-LU-Qyo"/>
                         <outlet property="yourCountryPlaceholderLabel" destination="9nX-5E-X7k" id="ojb-po-EVE"/>
                         <outlet property="yourPhonePlaceholderLabel" destination="KWc-yN-vnR" id="W5m-ol-zPn"/>
                     </connections>

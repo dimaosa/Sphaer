@@ -42,6 +42,7 @@
 		D207CDC31F293C1500B1AAE3 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207CDC21F293C1500B1AAE3 /* R.generated.swift */; };
 		D207CDC51F293C6700B1AAE3 /* PhoneInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207CDC41F293C6700B1AAE3 /* PhoneInputViewController.swift */; };
 		D207CDE71F2A4F4800B1AAE3 /* BaseRegistrationNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207CDE61F2A4F4800B1AAE3 /* BaseRegistrationNavigationController.swift */; };
+		D272DE621F4C9E8E002F9F0B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272DE611F4C9E8D002F9F0B /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		D207CDC21F293C1500B1AAE3 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		D207CDC41F293C6700B1AAE3 /* PhoneInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneInputViewController.swift; sourceTree = "<group>"; };
 		D207CDE61F2A4F4800B1AAE3 /* BaseRegistrationNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRegistrationNavigationController.swift; sourceTree = "<group>"; };
+		D272DE611F4C9E8D002F9F0B /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		E24E3C5E51784F8A3E36A067 /* Pods_Sphaer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sphaer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -193,6 +195,7 @@
 			children = (
 				D207CDB91F28E51E00B1AAE3 /* SphaerButton.swift */,
 				D207CDBB1F28F24B00B1AAE3 /* SphaerTextField.swift */,
+				D272DE611F4C9E8D002F9F0B /* Helper.swift */,
 				D207CDB31F28DE6F00B1AAE3 /* Extension+UIFont.swift */,
 				D207CDB51F28DFD900B1AAE3 /* Extension+UIColor.swift */,
 			);
@@ -363,6 +366,7 @@
 				D207CDE71F2A4F4800B1AAE3 /* BaseRegistrationNavigationController.swift in Sources */,
 				D207CDB41F28DE6F00B1AAE3 /* Extension+UIFont.swift in Sources */,
 				D207CDC51F293C6700B1AAE3 /* PhoneInputViewController.swift in Sources */,
+				D272DE621F4C9E8E002F9F0B /* Helper.swift in Sources */,
 				D207CD771F28D72300B1AAE3 /* AppDelegate.swift in Sources */,
 				D207CDC31F293C1500B1AAE3 /* R.generated.swift in Sources */,
 				D207CDBE1F292A2F00B1AAE3 /* LoginViewController.swift in Sources */,

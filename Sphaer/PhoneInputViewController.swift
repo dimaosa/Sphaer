@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PhoneNumberKit
 
 class PhoneInputViewController: BaseRegistrationController {
 
@@ -21,13 +22,11 @@ class PhoneInputViewController: BaseRegistrationController {
     @IBAction func selectCountryPressed(_ sender: UIButton) {
     }
     
-    
     @IBOutlet weak var yourPhonePlaceholderLabel: UILabel!
     
     @IBOutlet weak var countryCodeLabel: UILabel!
     
-    @IBOutlet weak var phoneTextFiled: UITextField!
-    
+    @IBOutlet weak var phoneTextField: PhoneNumberTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +34,19 @@ class PhoneInputViewController: BaseRegistrationController {
         setupNavigationBar(title: "Phone Number")
         
         setupUI()
+        setupLabels()
     }
 
     func setupUI() {
         phoneNumberInputInfoLabel.textColor = UIColor.sphaerWarmGrey
         yourCountryPlaceholderLabel.textColor = UIColor.sphaerDarkGrey
+        
+        phoneTextField.borderStyle = .none
+    }
+    
+    func setupLabels() {
+        
+        emojjiFlagOfCountryLabel.text = "\(Helper.emoji(countryCode: "fi"))"
+        countryNameLabel.text = "Finland"
     }
 }
