@@ -46,17 +46,25 @@ class PhoneInputViewController: BaseRegistrationController {
     var countryDriver: Driver<Country> {
         return country.asDriver()
     }
+    
     // Phone number formatter
     let phoneNumberKit = PhoneNumberKit()
+    
+    var phoneNumber: String {
+        return ("+" + country.value.phoneExtension + phoneTextField.text.safeUnwrapp).replacingOccurrences(of: " ", with: "")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //Base registation methods
         setupNavigationBar(title: "Phone Number")
+        setupNavigationBarUI()
         
         setupUI()
         setupLabels()
         setupKeyboard()
+        setupBackButton()
     }
 
     func setupUI() {
@@ -159,6 +167,12 @@ class PhoneInputViewController: BaseRegistrationController {
         }
         catch {
             return false
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? PhoneValidationViewController {
+            vc.phoneNumber = self.phoneNumber
         }
     }
 }

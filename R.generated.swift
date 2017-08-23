@@ -417,8 +417,23 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.segue` struct is generated, and contains static references to 0 view controllers.
+  /// This `R.segue` struct is generated, and contains static references to 1 view controllers.
   struct segue {
+    /// This struct is generated for `PhoneInputViewController`, and contains static references to 1 segues.
+    struct phoneInputViewController {
+      /// Segue identifier `validatePhoneNumber`.
+      static let validatePhoneNumber: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, PhoneInputViewController, PhoneValidationViewController> = Rswift.StoryboardSegueIdentifier(identifier: "validatePhoneNumber")
+      
+      /// Optionally returns a typed version of segue `validatePhoneNumber`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func validatePhoneNumber(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, PhoneInputViewController, PhoneValidationViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.phoneInputViewController.validatePhoneNumber, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   

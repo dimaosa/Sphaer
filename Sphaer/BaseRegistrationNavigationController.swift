@@ -8,37 +8,39 @@
 
 import UIKit
 
-class BaseRegistrationController: UIViewController {
+class BaseRegistrationController: UIViewController, UIGestureRecognizerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupBackButton()
+        //enable pop gesture with right swipe from edge
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
     }
 
     func setupNavigationBar(title: String) {
         let darkGrey = UIColor.sphaerDarkGrey
         
+        navigationItem.title = title
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSForegroundColorAttributeName : darkGrey,
+            NSFontAttributeName : UIFont.sphaerNavigationBarTitleFont() ?? UIFont.systemFont(ofSize: 22)
+        ]
+    }
+    
+    func setupNavigationBarUI() {
+        
+        let darkGrey = UIColor.sphaerDarkGrey
+
         UIApplication.shared.statusBarStyle = .lightContent
         
         navigationController?.navigationBar.tintColor = darkGrey
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
-        
-        navigationItem.title = title
-        navigationController?.navigationBar.titleTextAttributes = [
-            NSForegroundColorAttributeName : UIColor.darkGray,
-            NSFontAttributeName : UIFont.sphaerNavigationBarTitleFont() ?? UIFont.systemFont(ofSize: 22)
-        ]
-        
-        if let bounds = navigationController?.navigationBar.bounds {
-            navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height + 14.0)
-        }
     }
     
     func setupBackButton() {
-        var selector = navigationItem.leftBarButtonItem?.action
+        var selector = navigationItem.backBarButtonItem?.action
         
         if selector == nil {
             selector = #selector(hero_unwindToRootViewController)

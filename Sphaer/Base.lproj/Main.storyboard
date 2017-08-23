@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -37,14 +37,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icPattern" translatesAutoresizingMaskIntoConstraints="NO" id="y1A-Dv-j0X">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icLogo" translatesAutoresizingMaskIntoConstraints="NO" id="85s-bo-byC">
-                                <rect key="frame" x="140" y="128.5" width="95" height="95"/>
+                                <rect key="frame" x="112.5" y="102.5" width="95" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="85s-bo-byC" secondAttribute="height" multiplier="1:1" id="A35-bq-zmy"/>
                                     <constraint firstAttribute="width" constant="95" id="EYI-Vs-bOd"/>
@@ -54,7 +54,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Sphaer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yKj-yb-6jd">
-                                <rect key="frame" x="30" y="385.5" width="315" height="51.5"/>
+                                <rect key="frame" x="30" y="263" width="260" height="51.5"/>
                                 <fontDescription key="fontDescription" name="SanFranciscoDisplay-Bold" family="San Francisco Display" pointSize="43"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -63,7 +63,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwi-bO-uHH" customClass="SphaerButton" customModule="Sphaer" customModuleProvider="target">
-                                <rect key="frame" x="30" y="605" width="315" height="50"/>
+                                <rect key="frame" x="30" y="506" width="260" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="TRE-YZ-kIx"/>
                                 </constraints>
@@ -77,7 +77,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvg-7t-FRI">
-                                <rect key="frame" x="30" y="449" width="315" height="72"/>
+                                <rect key="frame" x="30" y="326.5" width="260" height="95.5"/>
                                 <string key="text">We searching travel
 and airline sites to help you find cheap flights at best prices.</string>
                                 <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="20"/>
@@ -88,7 +88,7 @@ and airline sites to help you find cheap flights at best prices.</string>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDZ-vi-x9R" customClass="SphaerButton" customModule="Sphaer" customModuleProvider="target">
-                                <rect key="frame" x="30" y="545" width="315" height="50"/>
+                                <rect key="frame" x="30" y="446" width="260" height="50"/>
                                 <color key="backgroundColor" red="0.30371430519999998" green="0.62709355349999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0V5-6R-DGB"/>
@@ -153,17 +153,17 @@ and airline sites to help you find cheap flights at best prices.</string>
                         <viewControllerLayoutGuide type="bottom" id="Vuw-Cy-40Y"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="S6l-pR-YhC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icPattern" translatesAutoresizingMaskIntoConstraints="NO" id="6tY-u3-UTV">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GY-my-Qjq" customClass="TPKeyboardAvoidingScrollView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRX-Su-3P1">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="567"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dc9-0j-Qdy">
                                                 <rect key="frame" x="16" y="24" width="50" height="50"/>
@@ -176,7 +176,7 @@ and airline sites to help you find cheap flights at best prices.</string>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icLogo" translatesAutoresizingMaskIntoConstraints="NO" id="uIB-yC-kau">
-                                                <rect key="frame" x="139.5" y="128.5" width="95" height="95"/>
+                                                <rect key="frame" x="112" y="102.5" width="95" height="95"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="uIB-yC-kau" secondAttribute="height" multiplier="1:1" id="24W-cL-umF"/>
                                                     <constraint firstAttribute="width" constant="95" id="bfK-1U-szn"/>
@@ -186,7 +186,7 @@ and airline sites to help you find cheap flights at best prices.</string>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ro-ha-asL">
-                                                <rect key="frame" x="30" y="445.5" width="314" height="14"/>
+                                                <rect key="frame" x="30" y="346.5" width="259" height="14"/>
                                                 <fontDescription key="fontDescription" name="SanFranciscoText-Bold" family="San Francisco Text" pointSize="12"/>
                                                 <color key="textColor" red="0.3880472183" green="0.39197611809999999" blue="0.40438944100000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -195,7 +195,7 @@ and airline sites to help you find cheap flights at best prices.</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="min 8 symbols" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wen-sk-K2K" customClass="SphaerTextField" customModule="Sphaer" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="464.5" width="314" height="30"/>
+                                                <rect key="frame" x="30" y="365.5" width="259" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -204,7 +204,7 @@ and airline sites to help you find cheap flights at best prices.</string>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="onp-ME-C1A">
-                                                <rect key="frame" x="30" y="497.5" width="314" height="14"/>
+                                                <rect key="frame" x="30" y="398.5" width="259" height="14"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="14" id="Sf6-gw-m8R"/>
                                                 </constraints>
@@ -216,7 +216,7 @@ and airline sites to help you find cheap flights at best prices.</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRW-UC-yxt">
-                                                <rect key="frame" x="30" y="366.5" width="314" height="14"/>
+                                                <rect key="frame" x="30" y="267.5" width="259" height="14"/>
                                                 <fontDescription key="fontDescription" name="SanFranciscoText-Bold" family="San Francisco Text" pointSize="12"/>
                                                 <color key="textColor" red="0.3880472183" green="0.39197611809999999" blue="0.40438944100000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -225,7 +225,7 @@ and airline sites to help you find cheap flights at best prices.</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name@domain.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U8d-Du-mBF" customClass="SphaerTextField" customModule="Sphaer" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="385.5" width="314" height="30"/>
+                                                <rect key="frame" x="30" y="286.5" width="259" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="mhe-3w-Hcz"/>
                                                 </constraints>
@@ -237,7 +237,7 @@ and airline sites to help you find cheap flights at best prices.</string>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXn-L6-fel" customClass="SphaerButton" customModule="Sphaer" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="544.5" width="314" height="50"/>
+                                                <rect key="frame" x="30" y="445.5" width="259" height="50"/>
                                                 <color key="backgroundColor" red="0.30371430519999998" green="0.62709355349999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="wMB-IJ-6Ma"/>
@@ -250,7 +250,7 @@ and airline sites to help you find cheap flights at best prices.</string>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhR-Vf-pp5" customClass="SphaerButton" customModule="Sphaer" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="604.5" width="314" height="50"/>
+                                                <rect key="frame" x="30" y="505.5" width="259" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="AUL-kG-03S"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="fLY-BR-lOU"/>
@@ -262,7 +262,7 @@ and airline sites to help you find cheap flights at best prices.</string>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aqp-O5-cdk">
-                                                <rect key="frame" x="30" y="416" width="314" height="21"/>
+                                                <rect key="frame" x="30" y="317" width="259" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -347,7 +347,7 @@ and airline sites to help you find cheap flights at best prices.</string>
         <scene sceneID="amy-f7-xm9">
             <objects>
                 <navigationController id="QTx-7F-nlE" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="jTN-u6-kmR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jTN-u6-kmR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -368,36 +368,36 @@ and airline sites to help you find cheap flights at best prices.</string>
                         <viewControllerLayoutGuide type="bottom" id="rYh-Lc-B0C"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Bul-0c-oUu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icPattern" translatesAutoresizingMaskIntoConstraints="NO" id="ave-pq-k9K">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S4I-Ch-QMQ" userLabel="separator">
-                                <rect key="frame" x="20" y="74" width="335" height="1"/>
+                                <rect key="frame" x="20" y="74" width="280" height="1"/>
                                 <color key="backgroundColor" red="0.95283776521682739" green="0.95300072431564331" blue="0.95282751321792603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="g5j-2L-Ypa"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please confirm your country code and enter your phone number." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVo-KD-uHd">
-                                <rect key="frame" x="30" y="105" width="315" height="41"/>
+                                <rect key="frame" x="30" y="105" width="260" height="41"/>
                                 <fontDescription key="fontDescription" name="SanFranciscoText-Light" family="San Francisco Text" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eps-Cg-LKi">
-                                <rect key="frame" x="30" y="176" width="315" height="50"/>
+                                <rect key="frame" x="30" y="176" width="260" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SI4-zg-AYH">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="50"/>
                                         <connections>
                                             <action selector="selectCountryPressed:" destination="VnZ-Qd-10F" eventType="touchUpInside" id="aI2-TA-tqD"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR COUNTRY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nX-5E-X7k">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="14.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="14.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="UPJ-Rd-7EG"/>
                                         </constraints>
@@ -445,10 +445,10 @@ and airline sites to help you find cheap flights at best prices.</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rvn-wl-hpf">
-                                <rect key="frame" x="30" y="256" width="315" height="50"/>
+                                <rect key="frame" x="30" y="256" width="260" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR PHONE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWc-yN-vnR">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="15"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="Wlh-g7-3TM"/>
                                         </constraints>
@@ -463,7 +463,7 @@ and airline sites to help you find cheap flights at best prices.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="146-781-3451" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YpQ-1V-aQS" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
-                                        <rect key="frame" x="57" y="15" width="258" height="35"/>
+                                        <rect key="frame" x="57" y="15" width="203" height="35"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="24"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -484,7 +484,7 @@ and airline sites to help you find cheap flights at best prices.</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7t-f7-Lpk" customClass="SphaerButton" customModule="Sphaer" customModuleProvider="target">
-                                <rect key="frame" x="30" y="336" width="315" height="50"/>
+                                <rect key="frame" x="30" y="336" width="260" height="50"/>
                                 <color key="backgroundColor" red="0.30371430519999998" green="0.62709355349999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Ivo-Mv-UHS"/>
@@ -497,6 +497,7 @@ and airline sites to help you find cheap flights at best prices.</string>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="continuePressed:" destination="VnZ-Qd-10F" eventType="touchUpInside" id="tbD-9D-zy5"/>
+                                    <segue destination="nHD-fa-N0M" kind="show" identifier="validatePhoneNumber" id="hiI-EH-qFZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -545,6 +546,129 @@ and airline sites to help you find cheap flights at best prices.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ITM-tV-aGi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1777.5" y="569.36619718309862"/>
+        </scene>
+        <!--Phone Validation View Controller-->
+        <scene sceneID="xYH-e5-REh">
+            <objects>
+                <viewController id="nHD-fa-N0M" customClass="PhoneValidationViewController" customModule="Sphaer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fc8-pd-R42"/>
+                        <viewControllerLayoutGuide type="bottom" id="SEL-5c-3tX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xeA-vE-rjU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icPattern" translatesAutoresizingMaskIntoConstraints="NO" id="Szz-KH-RzX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEH-58-ju0">
+                                <rect key="frame" x="30" y="393" width="260" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENTER THE CODE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iq2-Zg-oMT">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="hUI-ua-MV7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SanFranciscoText-Bold" family="San Francisco Text" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="146-781-3451" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AVL-SB-XPf" customClass="SphaerTextField" customModule="Sphaer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="15" width="260" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="t8g-2O-b4Y"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="DaC-QT-H1S">
+                                        <rect key="frame" x="0.0" y="47" width="260" height="14.5"/>
+                                        <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="fade"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AVL-SB-XPf" firstAttribute="leading" secondItem="IEH-58-ju0" secondAttribute="leading" id="2vL-f0-W4r"/>
+                                    <constraint firstAttribute="trailing" secondItem="AVL-SB-XPf" secondAttribute="trailing" id="DNH-pm-MJw"/>
+                                    <constraint firstItem="AVL-SB-XPf" firstAttribute="top" secondItem="Iq2-Zg-oMT" secondAttribute="bottom" id="Gty-dm-LlA"/>
+                                    <constraint firstItem="DaC-QT-H1S" firstAttribute="leading" secondItem="IEH-58-ju0" secondAttribute="leading" id="JEH-EA-aZQ"/>
+                                    <constraint firstAttribute="height" constant="65" id="OcX-bI-CZC"/>
+                                    <constraint firstItem="DaC-QT-H1S" firstAttribute="top" secondItem="AVL-SB-XPf" secondAttribute="bottom" constant="2" id="Ta6-Fi-8yb"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="DaC-QT-H1S" secondAttribute="bottom" id="VD4-uL-VmU"/>
+                                    <constraint firstItem="Iq2-Zg-oMT" firstAttribute="leading" secondItem="IEH-58-ju0" secondAttribute="leading" id="WVJ-jx-yju"/>
+                                    <constraint firstAttribute="trailing" secondItem="DaC-QT-H1S" secondAttribute="trailing" id="aaD-Nz-UBc"/>
+                                    <constraint firstAttribute="trailing" secondItem="Iq2-Zg-oMT" secondAttribute="trailing" id="bTq-4Q-5Na"/>
+                                    <constraint firstItem="Iq2-Zg-oMT" firstAttribute="top" secondItem="IEH-58-ju0" secondAttribute="top" id="ekC-jt-uM2"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jph-cn-cwn" userLabel="separator">
+                                <rect key="frame" x="20" y="78" width="280" height="1"/>
+                                <color key="backgroundColor" red="0.95283776519999996" green="0.95300072430000005" blue="0.95282751320000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="iXg-eB-Ie7"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We have sent you an SMS with a code to the number: +3 146-781-3451" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Io-kJ-1Nn">
+                                <rect key="frame" x="30" y="109" width="260" height="61"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoText-Light" family="San Francisco Text" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQa-XK-45s" customClass="SphaerButton" customModule="Sphaer" customModuleProvider="target">
+                                <rect key="frame" x="30" y="488" width="260" height="50"/>
+                                <color key="backgroundColor" red="0.30371430519999998" green="0.62709355349999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ix0-Rx-C6j"/>
+                                </constraints>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="signButton"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="continuePressed:" destination="VnZ-Qd-10F" eventType="touchUpInside" id="8N0-Xk-x6z"/>
+                                    <action selector="continuePressed:" destination="nHD-fa-N0M" eventType="touchUpInside" id="SMl-Nn-WeW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SEL-5c-3tX" firstAttribute="top" secondItem="hQa-XK-45s" secondAttribute="bottom" constant="30" id="1Gs-Ry-xhb"/>
+                            <constraint firstAttribute="trailing" secondItem="Szz-KH-RzX" secondAttribute="trailing" id="8sz-xl-SVu"/>
+                            <constraint firstAttribute="trailing" secondItem="7Io-kJ-1Nn" secondAttribute="trailing" constant="30" id="9Rz-yH-iye"/>
+                            <constraint firstAttribute="trailing" secondItem="Jph-cn-cwn" secondAttribute="trailing" constant="20" id="DCk-CQ-Kuq"/>
+                            <constraint firstItem="IEH-58-ju0" firstAttribute="leading" secondItem="xeA-vE-rjU" secondAttribute="leading" constant="30" id="FpL-dJ-Iw3"/>
+                            <constraint firstItem="Jph-cn-cwn" firstAttribute="leading" secondItem="xeA-vE-rjU" secondAttribute="leading" constant="20" id="Ip4-T5-es6"/>
+                            <constraint firstItem="7Io-kJ-1Nn" firstAttribute="top" secondItem="Jph-cn-cwn" secondAttribute="bottom" constant="30" id="KMq-6C-H9Y"/>
+                            <constraint firstItem="Szz-KH-RzX" firstAttribute="top" secondItem="xeA-vE-rjU" secondAttribute="top" id="LVg-sQ-cXJ"/>
+                            <constraint firstItem="Jph-cn-cwn" firstAttribute="top" secondItem="Fc8-pd-R42" secondAttribute="bottom" constant="14" id="Qdd-K4-ibG"/>
+                            <constraint firstItem="hQa-XK-45s" firstAttribute="leading" secondItem="xeA-vE-rjU" secondAttribute="leading" constant="30" id="TL7-kg-hFm"/>
+                            <constraint firstItem="7Io-kJ-1Nn" firstAttribute="leading" secondItem="xeA-vE-rjU" secondAttribute="leading" constant="30" id="UTW-b6-OGE"/>
+                            <constraint firstAttribute="trailing" secondItem="hQa-XK-45s" secondAttribute="trailing" constant="30" id="fxK-cK-29N"/>
+                            <constraint firstItem="SEL-5c-3tX" firstAttribute="top" secondItem="Szz-KH-RzX" secondAttribute="bottom" id="joi-1h-ek0"/>
+                            <constraint firstItem="hQa-XK-45s" firstAttribute="top" secondItem="IEH-58-ju0" secondAttribute="bottom" constant="30" id="sWg-T1-wl6"/>
+                            <constraint firstAttribute="trailing" secondItem="IEH-58-ju0" secondAttribute="trailing" constant="30" id="ujr-DI-fDR"/>
+                            <constraint firstItem="Szz-KH-RzX" firstAttribute="leading" secondItem="xeA-vE-rjU" secondAttribute="leading" id="wui-HY-uaA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="codeTextField" destination="AVL-SB-XPf" id="hVE-bA-ELp"/>
+                        <outlet property="continueButton" destination="hQa-XK-45s" id="eaa-je-XTU"/>
+                        <outlet property="enterTheCodePlaceholder" destination="Iq2-Zg-oMT" id="92O-OJ-oTv"/>
+                        <outlet property="errorLabel" destination="DaC-QT-H1S" id="wj8-6g-d8z"/>
+                        <outlet property="phoneValidationInfoLabel" destination="7Io-kJ-1Nn" id="tHq-Sn-r0e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5QB-Zf-UpG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2504.8000000000002" y="570.76461769115451"/>
         </scene>
     </scenes>
     <resources>
