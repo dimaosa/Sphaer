@@ -15,6 +15,8 @@ class BaseRegistrationController: UIViewController, UIGestureRecognizerDelegate 
 
         //enable pop gesture with right swipe from edge
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        
+        setupBackButton()
     }
 
     func setupNavigationBar(title: String) {
@@ -40,13 +42,15 @@ class BaseRegistrationController: UIViewController, UIGestureRecognizerDelegate 
     }
     
     func setupBackButton() {
-        var selector = navigationItem.backBarButtonItem?.action
+        let backButton = UIBarButtonItem(image: R.image.icArrowBack()?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(self.pop))
         
-        if selector == nil {
-            selector = #selector(hero_unwindToRootViewController)
+        navigationItem.setLeftBarButton(backButton, animated: false)
+    }
+    
+    func pop() {
+        if self.navigationController?.popViewController(animated: true) == nil {
+            hero_unwindToRootViewController()
         }
-        
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: R.image.icArrowBack()?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: selector)
     }
 
 }

@@ -42,6 +42,10 @@
 		D207CDC31F293C1500B1AAE3 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207CDC21F293C1500B1AAE3 /* R.generated.swift */; };
 		D207CDC51F293C6700B1AAE3 /* PhoneInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207CDC41F293C6700B1AAE3 /* PhoneInputViewController.swift */; };
 		D207CDE71F2A4F4800B1AAE3 /* BaseRegistrationNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207CDE61F2A4F4800B1AAE3 /* BaseRegistrationNavigationController.swift */; };
+		D2344C7D1F4F6F8D00FB1C60 /* CreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2344C7C1F4F6F8D00FB1C60 /* CreditCardViewController.swift */; };
+		D2344C7F1F4F788400FB1C60 /* ImageCardName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2344C7E1F4F788400FB1C60 /* ImageCardName.swift */; };
+		D2344C811F4F794900FB1C60 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2344C801F4F794900FB1C60 /* CardType.swift */; };
+		D2344C831F4F7D0100FB1C60 /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2344C821F4F7D0100FB1C60 /* Extension+Date.swift */; };
 		D272DE621F4C9E8E002F9F0B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272DE611F4C9E8D002F9F0B /* Helper.swift */; };
 		D272DE641F4CAA6E002F9F0B /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = D272DE631F4CAA6E002F9F0B /* Country.swift */; };
 		D2AD68321F4CEB5A00DB7E3E /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AD68311F4CEB5A00DB7E3E /* Countries.swift */; };
@@ -88,6 +92,10 @@
 		D207CDC21F293C1500B1AAE3 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		D207CDC41F293C6700B1AAE3 /* PhoneInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneInputViewController.swift; sourceTree = "<group>"; };
 		D207CDE61F2A4F4800B1AAE3 /* BaseRegistrationNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRegistrationNavigationController.swift; sourceTree = "<group>"; };
+		D2344C7C1F4F6F8D00FB1C60 /* CreditCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardViewController.swift; sourceTree = "<group>"; };
+		D2344C7E1F4F788400FB1C60 /* ImageCardName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCardName.swift; sourceTree = "<group>"; };
+		D2344C801F4F794900FB1C60 /* CardType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
+		D2344C821F4F7D0100FB1C60 /* Extension+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
 		D272DE611F4C9E8D002F9F0B /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		D272DE631F4CAA6E002F9F0B /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		D2AD68311F4CEB5A00DB7E3E /* Countries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
@@ -212,6 +220,8 @@
 			children = (
 				D272DE631F4CAA6E002F9F0B /* Country.swift */,
 				D2AD68311F4CEB5A00DB7E3E /* Countries.swift */,
+				D2344C7E1F4F788400FB1C60 /* ImageCardName.swift */,
+				D2344C801F4F794900FB1C60 /* CardType.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -224,6 +234,7 @@
 				D207CDE61F2A4F4800B1AAE3 /* BaseRegistrationNavigationController.swift */,
 				D207CDC41F293C6700B1AAE3 /* PhoneInputViewController.swift */,
 				D2AD68331F4DF5F600DB7E3E /* PhoneValidationViewController.swift */,
+				D2344C7C1F4F6F8D00FB1C60 /* CreditCardViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -234,6 +245,7 @@
 				D207CDB31F28DE6F00B1AAE3 /* Extension+UIFont.swift */,
 				D207CDB51F28DFD900B1AAE3 /* Extension+UIColor.swift */,
 				D2AD68371F4E1C4800DB7E3E /* Extension+String.swift */,
+				D2344C821F4F7D0100FB1C60 /* Extension+Date.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -398,6 +410,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2344C7D1F4F6F8D00FB1C60 /* CreditCardViewController.swift in Sources */,
+				D2344C831F4F7D0100FB1C60 /* Extension+Date.swift in Sources */,
 				D2AD68341F4DF5F600DB7E3E /* PhoneValidationViewController.swift in Sources */,
 				D207CDBA1F28E51E00B1AAE3 /* SphaerButton.swift in Sources */,
 				D2AD68321F4CEB5A00DB7E3E /* Countries.swift in Sources */,
@@ -412,7 +426,9 @@
 				D207CDBE1F292A2F00B1AAE3 /* LoginViewController.swift in Sources */,
 				D207CDB61F28DFD900B1AAE3 /* Extension+UIColor.swift in Sources */,
 				D207CDBC1F28F24B00B1AAE3 /* SphaerTextField.swift in Sources */,
+				D2344C7F1F4F788400FB1C60 /* ImageCardName.swift in Sources */,
 				D207CDB81F28E09D00B1AAE3 /* GetStartedViewController.swift in Sources */,
+				D2344C811F4F794900FB1C60 /* CardType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

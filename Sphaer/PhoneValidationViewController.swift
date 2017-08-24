@@ -33,7 +33,6 @@ class PhoneValidationViewController: BaseRegistrationController {
         super.viewDidLoad()
 
         setupNavigationBar(title: "Phone Validation")
-        setupBackButton()
         setupKeyboard()
         setupUI()
         setupTextHandling()
@@ -55,11 +54,6 @@ class PhoneValidationViewController: BaseRegistrationController {
         errorLabel.font = UIFont.sphaerErrorFont()
         errorLabel.textColor = UIColor.sphaerLightRed
         errorLabel.text = ""
-    }
-    
-    override func setupBackButton(){
-        let backButton = UIBarButtonItem(image: R.image.icArrowBack()?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(self.dismissVC))
-        self.navigationItem.setLeftBarButton(backButton, animated: false)
     }
     
     func setupTextHandling() {

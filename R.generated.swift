@@ -373,16 +373,27 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 4 images.
+  /// This `R.image` struct is generated, and contains static references to 7 images.
   struct image {
+    /// Image `icActionsheet`.
+    static let icActionsheet = Rswift.ImageResource(bundle: R.hostingBundle, name: "icActionsheet")
     /// Image `icArrowBack`.
     static let icArrowBack = Rswift.ImageResource(bundle: R.hostingBundle, name: "icArrowBack")
     /// Image `icDropdown`.
     static let icDropdown = Rswift.ImageResource(bundle: R.hostingBundle, name: "icDropdown")
     /// Image `icLogo`.
     static let icLogo = Rswift.ImageResource(bundle: R.hostingBundle, name: "icLogo")
+    /// Image `icMastercard`.
+    static let icMastercard = Rswift.ImageResource(bundle: R.hostingBundle, name: "icMastercard")
     /// Image `icPattern`.
     static let icPattern = Rswift.ImageResource(bundle: R.hostingBundle, name: "icPattern")
+    /// Image `icVisa`.
+    static let icVisa = Rswift.ImageResource(bundle: R.hostingBundle, name: "icVisa")
+    
+    /// `UIImage(named: "icActionsheet", bundle: ..., traitCollection: ...)`
+    static func icActionsheet(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icActionsheet, compatibleWith: traitCollection)
+    }
     
     /// `UIImage(named: "icArrowBack", bundle: ..., traitCollection: ...)`
     static func icArrowBack(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -399,9 +410,19 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.icLogo, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "icMastercard", bundle: ..., traitCollection: ...)`
+    static func icMastercard(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icMastercard, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "icPattern", bundle: ..., traitCollection: ...)`
     static func icPattern(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icPattern, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icVisa", bundle: ..., traitCollection: ...)`
+    static func icVisa(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icVisa, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -521,9 +542,11 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
+        if UIKit.UIImage(named: "icActionsheet") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icActionsheet' is used in storyboard 'Main', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icPattern") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icPattern' is used in storyboard 'Main', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icVisa") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icVisa' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icDropdown") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icDropdown' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icLogo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icLogo' is used in storyboard 'Main', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "icPattern") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icPattern' is used in storyboard 'Main', but couldn't be loaded.") }
         if _R.storyboard.main().getStartedViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'getStartedViewController' could not be loaded from storyboard 'Main' as 'GetStartedViewController'.") }
         if _R.storyboard.main().loginViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'loginViewController' could not be loaded from storyboard 'Main' as 'LoginViewController'.") }
       }
