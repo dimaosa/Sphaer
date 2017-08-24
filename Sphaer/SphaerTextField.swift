@@ -14,6 +14,7 @@ class SphaerTextField: UITextField, UITextFieldDelegate {
     @IBInspectable var insetX: CGFloat = 0.0
     @IBInspectable var insetY: CGFloat = 0.0
     @IBInspectable var isDigitsOnly: Bool = false
+    @IBInspectable var maxLength: Int = 1000
         
     override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
         
@@ -60,13 +61,20 @@ class SphaerTextField: UITextField, UITextFieldDelegate {
     }
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        var result = true
+        
         if isDigitsOnly {
             let allowedCharacters = CharacterSet.decimalDigits
             let characterSet = CharacterSet(charactersIn: string)
-            return allowedCharacters.isSuperset(of: characterSet)
-        } else {
-            return true
+            result = allowedCharacters.isSuperset(of: characterSet)
         }
+        
+        if range.location >= maxLength {
+            result = false
+        }
+        
+        return result
     }
 
 }

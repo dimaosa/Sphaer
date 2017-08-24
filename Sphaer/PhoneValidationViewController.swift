@@ -46,6 +46,7 @@ class PhoneValidationViewController: BaseRegistrationController {
         codeTextField.placeholder = "123456".shuffle
         codeTextField.keyboardType = .decimalPad
         codeTextField.isDigitsOnly = true
+        codeTextField.maxLength = 6
         
         phoneValidationInfoLabel.text = "We have sent you an SMS with a code to the number: " + phoneNumber.safeUnwrapp
         
