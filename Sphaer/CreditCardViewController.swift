@@ -34,7 +34,6 @@ class CreditCardViewController: BaseRegistrationController {
     @IBOutlet weak var skipThisStepButton: SphaerButton!
     @IBOutlet weak var continueButton: SphaerButton!
     
-    //
     private let cardType: Variable<CardType> = Variable(.unknown)
     
     private let disposeBag = DisposeBag()
@@ -72,15 +71,22 @@ class CreditCardViewController: BaseRegistrationController {
         cardNumberTextField.textColor = UIColor.sphaerDarkGreyBlue
         cardNumberTextField.isDigitsOnly = true
         cardNumberTextField.keyboardType = .decimalPad
+        cardNumberTextField.font = UIFont.sphaerInputCardFont()
+        cardNumberTextField.letterSpacing = 1.2
+        cardNumberTextField.maxLength = 19 
         
         // Expires
         expiresPlaceholderLabel.text = "Expires".uppercased()
         expiresPlaceholderLabel.textColor = UIColor.sphaerDarkGrey
         
+        expiresTextField.placeholder = "MM / YY"
         expiresTextField.textColor = UIColor.sphaerDarkGreyBlue
         expiresTextField.keyboardType = .decimalPad
         expiresTextField.tintColor = UIColor.sphaerWhite
-        //expiresTextField.isDigitsOnly = true
+        expiresTextField.isDigitsOnly = true
+        expiresTextField.font = UIFont.sphaerInputCardFont()
+        expiresTextField.letterSpacing = 1.2
+        expiresTextField.maxLength = 7 // Because "MM / YY".charactest.count = 7
         
         // CCV
         cvvPlaceholderLabel.text = "cvv".uppercased()
@@ -90,6 +96,8 @@ class CreditCardViewController: BaseRegistrationController {
         cvvTextField.keyboardType = .decimalPad
         cvvTextField.tintColor = UIColor.sphaerWhite
         cvvTextField.isDigitsOnly = true
+        cvvTextField.font = UIFont.sphaerInputCardFont()
+        cvvTextField.letterSpacing = 1.2
         
         // Skip this step Button
         skipThisStepButton.isWhiteBackground = true
@@ -109,8 +117,7 @@ class CreditCardViewController: BaseRegistrationController {
                 } else {
                     self.cvvTextField.placeholder = "123"
                 }
-            })
-            .disposed(by: disposeBag)
+            }).disposed(by: disposeBag)
     }
     
     func setupTextFields() {
@@ -120,28 +127,66 @@ class CreditCardViewController: BaseRegistrationController {
             .text
             .map{ self.validate(cardText: $0) }
         
-//        cardNumberValid
-//            .bind
-//            .subscribe(onNext: { self.creditCardNumberTextField.valid = $0 })
-//            .addDisposableTo(disposeBag)
+        cardNumberTextField
+            .rx
+            .controlEvent(.editingChanged)
+            .asObservable()
+            .subscribe(onNext: { [weak self] _ in
+                
+                guard let strong = self, let string = strong.cardNumberTextField.text else { return }
+                
+                // Set CardType
+                strong.cardType.value = strong.cardType(using: strong.cardNumberTextField.text ?? "")
+
+                // Remember the position of cursor in order to put it back when textField will be formatted
+                let oldPositionIndex = strong.textFieldCursorPosition(textField: strong.cardNumberTextField)
+                
+                let formatted = strong.formattedCardNumber(using: string)
+                strong.cardNumberTextField.text = formatted.text
+                
+                // Change position of cursor when there is extra space"s" added
+                guard let position = strong.textPosition(from: strong.cardNumberTextField, offset: oldPositionIndex + formatted.amountOfSpacesAdded) else { return }
+                strong.cardNumberTextField.selectedTextRange = strong.cardNumberTextField.textRange(from: position, to: position)
+                
+                // Advance to next field if needed
+                if formatted.text.removeSpaces().characters.count == strong.cardType.value.expectedDigits && strong.cardNumberTextField.endOfDocument == position {
+                    strong.expiresTextField.becomeFirstResponder()
+                }
+            }).disposed(by: disposeBag)
         
         let expirationValid = expiresTextField
             .rx
             .text
             .map { self.validate(expirationDateText: $0) }
         
-//        expirationValid
-//            .subscribe(onNext: { self.expirationDateTextField.valid = $0 })
-//            .dispose(by: disposeBag)
+        expiresTextField
+            .rx
+            .controlEvent(.editingChanged)
+            .asObservable()
+            .subscribe(onNext: { [weak self] _ in
+                
+                guard let strong = self, let text = strong.expiresTextField.text else { return }
+                
+                // Remember the position of cursor in order to put it back when textField will be formatted
+                let oldPositionIndex = strong.textFieldCursorPosition(textField: strong.expiresTextField)
+                
+                let formatted = strong.formatExpirationDate(using: text)
+                strong.expiresTextField.text = formatted.text
+                
+                // Change position of cursor when there is extra space"s" added
+                guard let position = strong.textPosition(from: strong.expiresTextField, offset: oldPositionIndex + formatted.amountOfSpacesAdded) else { return }
+                strong.expiresTextField.selectedTextRange = strong.expiresTextField.textRange(from: position, to: position)
+                
+                // Advance to next field if needed
+                if formatted.text.removeSlash().characters.count == strong.cardType.value.expectedDigitsInExperation && strong.expiresTextField.endOfDocument == position {
+                    strong.cvvTextField.becomeFirstResponder()
+                }
+        }).disposed(by: disposeBag)
         
         let cvvValid = cvvTextField
             .rx
             .text
             .map { self.validate(cvvText: $0) }
-        
-//        cvvValid
-//            .subscribe(onNext: { self.cvvTextField.valid = $0 })
-//            .dispose(by: disposeBag)
         
         let everythingValid = Observable
             .combineLatest(cardNumberValid, expirationValid, cvvValid) {
@@ -156,67 +201,62 @@ class CreditCardViewController: BaseRegistrationController {
     //MARK: - Validation methods
     
     func validate(cardText: String?) -> Bool {
-        guard let cardTextSafe = cardText else { return false }
-        
-        let noWhitespace = cardTextSafe.removeSpaces()
-        
-        updateCardType(using: noWhitespace)
-        formatCardNumber(using: noWhitespace)
-        advanceIfNecessary(noSpacesCardNumber: noWhitespace)
-        
-        guard cardType.value != .unknown else {
-            //Definitely not valid if the type is unknown.
-            return false
-        }
-        
-        guard noWhitespace.isLuhnValid() else {
-            //Failed luhn validation
+        guard
+            let noWhitespace = cardText?.removeSpaces(),
+            cardType(using: noWhitespace) != .unknown || noWhitespace.isLuhnValid()
+        else {
             return false
         }
         
         return noWhitespace.characters.count == self.cardType.value.expectedDigits
     }
     
+    
     func validate(expirationDateText expiration: String?) -> Bool {
-        guard let expirationSafe = expiration else { return false }
-
-        let strippedSlashExpiration = expirationSafe.removeSlash()
-        
-        formatExpirationDate(using: strippedSlashExpiration)
-        advanceIfNecessary(expirationNoSpacesOrSlash: strippedSlashExpiration)
-        
-        return strippedSlashExpiration.isValidExpirationDate()
+        guard let expirationSafe = expiration?.removeSlash() else { return false }
+        return expirationSafe.isValidExpirationDate()
     }
     
     func validate(cvvText cvv: String?) -> Bool {
-        guard let cvvSafe = cvv, cvvSafe.allCharactersAreNumbers() else { return false }
-        
+        guard let cvvSafe = cvv else { return false }
         return cvvSafe.characters.count == self.cardType.value.cvvDigits
     }
     
     //MARK: Single-serve helper functions
     
-    private func updateCardType(using noSpacesNumber: String) {
-        cardType.value = CardType.fromString(string: noSpacesNumber)
+    private func cardType(using noSpacesNumber: String) -> CardType {
+        return CardType.fromString(string: noSpacesNumber)
     }
     
-    private func formatCardNumber(using noSpacesCardNumber: String) {
-        cardNumberTextField.text = self.cardType.value.format(noSpaces: noSpacesCardNumber)
+    private func formattedCardNumber(using cardNumber: String) -> (text: String, amountOfSpacesAdded: Int) {
+        
+        let formatted = self.cardType.value.format(noSpaces: cardNumber.removeSpaces())
+        
+        let amountOfSpacesAdded = formatted.characters.count - cardNumber.characters.count
+        
+        return (formatted, amountOfSpacesAdded > 0 ? amountOfSpacesAdded : 0)
     }
     
-    func advanceIfNecessary(noSpacesCardNumber: String) {
-        if noSpacesCardNumber.characters.count == self.cardType.value.expectedDigits {
-            expiresTextField.becomeFirstResponder()
+    func formatExpirationDate(using expirationDate: String) -> (text: String, amountOfSpacesAdded: Int) {
+        
+        //In order to make it clear as a child and pure as a Canadian Nature
+        let expirationNoSpacesOrSlash = expirationDate.removeSlash() // It also removes spaces
+        
+        let formatted = expirationNoSpacesOrSlash.addSlash()
+        
+        let amountOfSpacesAdded = formatted.characters.count - expirationDate.characters.count
+        
+        return (formatted, amountOfSpacesAdded > 0 ? amountOfSpacesAdded : 0)
+    }
+    
+    func textFieldCursorPosition(textField: UITextField) -> Int {
+        if let selectedRange = textField.selectedTextRange {
+            return textField.offset(from: textField.beginningOfDocument, to: selectedRange.start)
         }
+        return 0
     }
     
-    func formatExpirationDate(using expirationNoSpacesOrSlash: String) {
-        expiresTextField.text = expirationNoSpacesOrSlash.addSlash()
-    }
-    
-    func advanceIfNecessary(expirationNoSpacesOrSlash: String) {
-        if expirationNoSpacesOrSlash.characters.count == 4 { //mmyy
-            self.cvvTextField.becomeFirstResponder()
-        }
+    func textPosition(from textField: UITextField, offset: Int) -> UITextPosition? {
+        return textField.position(from: textField.beginningOfDocument, offset: offset)
     }
 }

@@ -39,8 +39,9 @@ enum CardType {
             return .unknown
         }
         
-        guard string.allCharactersAreNumbers() else {
-            assertionFailure("One of these characters is not a number!")
+        let newString = string.removeSpaces()
+        
+        guard newString.allCharactersAreNumbers() else {
             return .unknown
         }
         
@@ -49,14 +50,14 @@ enum CardType {
         //Amex: Starts with 34 or 37
         //Discover: Starts with 6011, 622126-622925, 644-649, or 65
         
-        if string.hasPrefix("4") {
+        if newString.hasPrefix("4") {
             //If the first # is a 4, it's a visa
             return .visa
         }
         
         //Else, we need more info, keep going
         
-        let firstTwo = string.integerValueOfFirst(characters: 2)
+        let firstTwo = newString.integerValueOfFirst(characters: 2)
         guard firstTwo != NSNotFound else {
             return .unknown
         }
@@ -73,7 +74,7 @@ enum CardType {
             break
         }
         
-        let firstThree = string.integerValueOfFirst(characters: 3)
+        let firstThree = newString.integerValueOfFirst(characters: 3)
         guard firstThree != NSNotFound else {
             return .unknown
         }
@@ -87,7 +88,7 @@ enum CardType {
         }
         
         
-        let firstFour = string.integerValueOfFirst(characters: 4)
+        let firstFour = newString.integerValueOfFirst(characters: 4)
         guard firstFour != NSNotFound else {
             return .unknown
         }
@@ -102,7 +103,7 @@ enum CardType {
             break
         }
         
-        let firstSix = string.integerValueOfFirst(characters: 6)
+        let firstSix = newString.integerValueOfFirst(characters: 6)
         guard firstSix != NSNotFound else {
             return .unknown
         }
@@ -123,6 +124,10 @@ enum CardType {
         default:
             return 16
         }
+    }
+    
+    var expectedDigitsInExperation: Int {
+        return 4
     }
     
     var image: UIImage {
@@ -159,7 +164,7 @@ enum CardType {
     }
     
     func format(noSpaces: String) -> String {
-        guard noSpaces.characters.count >= 4 else {
+        guard noSpaces.characters.count > 4 else {
             //No formatting necessary if <= 4
             return noSpaces
         }

@@ -15,6 +15,28 @@ class SphaerTextField: UITextField, UITextFieldDelegate {
     @IBInspectable var insetY: CGFloat = 0.0
     @IBInspectable var isDigitsOnly: Bool = false
     @IBInspectable var maxLength: Int = 1000
+    
+    var letterSpacing: CGFloat = 1.3
+    
+    override var text: String? {
+        didSet {
+            if let textString = text, textString.characters.count > 0 {
+                let attrString = NSMutableAttributedString(string: textString)
+                attrString.addAttribute(NSKernAttributeName, value: letterSpacing, range: NSRange(location: 0, length: attrString.length - 1))
+                attributedText = attrString
+            }
+        }
+    }
+    
+    override var placeholder: String? {
+        didSet {
+            if let textString = placeholder, textString.characters.count > 0 {
+                let attributedString = NSMutableAttributedString(string: textString)
+                attributedString.addAttribute(NSKernAttributeName, value: letterSpacing, range: NSRange(location: 0, length: attributedString.length - 1))
+                attributedPlaceholder = attributedString
+            }
+        }
+    }
         
     override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
         
@@ -69,9 +91,10 @@ class SphaerTextField: UITextField, UITextFieldDelegate {
             let characterSet = CharacterSet(charactersIn: string)
             result = allowedCharacters.isSuperset(of: characterSet)
         }
-        
-        if range.location >= maxLength {
+        let count = self.text?.characters.count ?? range.location
+        if count >= maxLength && !string.isEmpty {
             result = false
+
         }
         
         return result

@@ -130,7 +130,7 @@ extension String {
     
     func isValidExpirationDate() -> Bool {
         let noSlash = self.removeSlash()
-        guard noSlash.characters.count == 6 //Must be mmyy
+        guard noSlash.characters.count == 4 //Must be mmyy
             && noSlash.allCharactersAreNumbers() else { //must be all numbers
                 return false
         }
