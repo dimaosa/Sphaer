@@ -44,10 +44,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icLogo" translatesAutoresizingMaskIntoConstraints="NO" id="85s-bo-byC">
-                                <rect key="frame" x="140" y="128.5" width="95" height="95"/>
+                                <rect key="frame" x="157.5" y="146" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="85s-bo-byC" secondAttribute="height" multiplier="1:1" id="A35-bq-zmy"/>
-                                    <constraint firstAttribute="width" constant="95" id="EYI-Vs-bOd"/>
+                                    <constraint firstAttribute="width" constant="60" id="EYI-Vs-bOd"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0, -500) fade"/>
@@ -176,10 +176,10 @@ and airline sites to help you find cheap flights at best prices.</string>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icLogo" translatesAutoresizingMaskIntoConstraints="NO" id="uIB-yC-kau">
-                                                <rect key="frame" x="139.5" y="128.5" width="95" height="95"/>
+                                                <rect key="frame" x="157" y="146" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="uIB-yC-kau" secondAttribute="height" multiplier="1:1" id="24W-cL-umF"/>
-                                                    <constraint firstAttribute="width" constant="95" id="bfK-1U-szn"/>
+                                                    <constraint firstAttribute="width" constant="60" id="bfK-1U-szn"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0, 168) fade"/>
@@ -347,7 +347,7 @@ and airline sites to help you find cheap flights at best prices.</string>
         <scene sceneID="amy-f7-xm9">
             <objects>
                 <navigationController id="QTx-7F-nlE" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jTN-u6-kmR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="jTN-u6-kmR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -382,13 +382,13 @@ and airline sites to help you find cheap flights at best prices.</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please confirm your country code and enter your phone number." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVo-KD-uHd">
-                                <rect key="frame" x="30" y="105" width="315" height="20.5"/>
+                                <rect key="frame" x="30" y="105" width="315" height="41"/>
                                 <fontDescription key="fontDescription" name="SanFranciscoText-Light" family="San Francisco Text" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eps-Cg-LKi">
-                                <rect key="frame" x="30" y="155.5" width="315" height="50"/>
+                                <rect key="frame" x="30" y="176" width="315" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SI4-zg-AYH">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
@@ -445,7 +445,7 @@ and airline sites to help you find cheap flights at best prices.</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rvn-wl-hpf">
-                                <rect key="frame" x="30" y="235.5" width="315" height="50"/>
+                                <rect key="frame" x="30" y="256" width="315" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR PHONE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWc-yN-vnR">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="15"/>
@@ -484,7 +484,7 @@ and airline sites to help you find cheap flights at best prices.</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7t-f7-Lpk" customClass="SphaerButton" customModule="Sphaer" customModuleProvider="target">
-                                <rect key="frame" x="30" y="315.5" width="315" height="50"/>
+                                <rect key="frame" x="30" y="336" width="315" height="50"/>
                                 <color key="backgroundColor" red="0.30371430519999998" green="0.62709355349999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Ivo-Mv-UHS"/>
@@ -615,7 +615,7 @@ and airline sites to help you find cheap flights at best prices.</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We have sent you an SMS with a code to the number: +3 146-781-3451" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Io-kJ-1Nn">
-                                <rect key="frame" x="30" y="109" width="315" height="20.5"/>
+                                <rect key="frame" x="30" y="109" width="315" height="41"/>
                                 <fontDescription key="fontDescription" name="SanFranciscoText-Light" family="San Francisco Text" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -913,7 +913,7 @@ and airline sites to help you find cheap flights at best prices.</string>
     <resources>
         <image name="icActionsheet" width="30" height="20"/>
         <image name="icDropdown" width="10" height="10"/>
-        <image name="icLogo" width="95" height="95"/>
+        <image name="icLogo" width="48" height="48"/>
         <image name="icPattern" width="375" height="667"/>
         <image name="icVisa" width="61" height="20"/>
     </resources>
